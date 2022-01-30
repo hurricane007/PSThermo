@@ -1,0 +1,7 @@
+name = "PSThermo"
+uuid = "56d04ed9-0a51-4506-86ba-fcef1f524d69"
+authors = ["Zirui He  zr_he@yahoo.com"]
+version = "0.1.0"
+
+[deps]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
