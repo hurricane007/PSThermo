@@ -19,5 +19,5 @@ function SolidsCp(subName::String, Temp::Real)
 end
 
 function SolidsCp()
-    println(keys(solidThermoData))
+    println("Availabel solids are $(keys(solidThermoData))")
 end

@@ -21,7 +21,7 @@ function GasEnthalpy(subName::String, Temp::Real)
 end
 
 function GasEnthalpy()
-    println(keys(gasThermoData))
+    println("Availabel gases are $(keys(gasThermoData))")
 end
 
 " return the entropy of substance, [kJ/mol*K]"
@@ -45,7 +45,7 @@ function GasEntropy(subName::String, Temp::Real)
 end
 
 function GasEntropy()
-    println(keys(gasThermoData))
+    println("Availabel gases are $(keys(gasThermoData))")
 end
 
 "return the heat capacity of substance, kJ/mol*K"
@@ -70,5 +70,5 @@ function GasCp(subName::String, Temp::Real)
 end
 
 function GasCp()
-    println(keys(gasThermoData))
+    println("Availabel gases are $(keys(gasThermoData))")
 end

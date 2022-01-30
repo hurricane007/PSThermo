@@ -7,5 +7,5 @@ function Mm(subName::String)
 end
 
 function Mm()
-    println(keys(molarMassData))
+    println("Availabel species are $(keys(molarMassData))")
 end

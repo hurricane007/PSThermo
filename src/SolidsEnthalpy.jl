@@ -22,5 +22,5 @@ function SolidsEnthalpy(subName::String, Temp::Real)
 end
 
 function SolidsEnthalpy()
-    println(keys(solidThermoData))
+    println("Availabel solids are $(keys(solidThermoData))")
 end
