@@ -1,7 +1,9 @@
 # PSThermo
 This is a simple package to calculate the thermo properties of pure substances.
 Data are from nist webBook (http://webbook.nist.gov/)
+
 Currently the vailabel gases are ["N2", "CO", "O2", "CH4", "Ar", "H2O", "CO2", "H2"]
+
 available solids are ["Co3O4", "Cu", "CuO", "Ni", "Co", "Fe3O4", "FeO", "NiO", "MgAl2O4", "CoO", "Fe2O3", "Fe"]
 
 ## method
