@@ -1,5 +1,5 @@
 # PSThermo
-This is a simple package to calculate the thermo properties of pure substances.
+This is a simple package to calculate the thermo properties of pure substances.Basically for simulation for chemical looping reforming.
 Data are from nist webBook (http://webbook.nist.gov/)
 
 Currently the vailabel gases are ["N2", "CO", "O2", "CH4", "Ar", "H2O", "CO2", "H2"]
