@@ -3,7 +3,10 @@ function Viscosity(subName::String, Temp::Real)
         Trange = viscosityData["Temp"]
         coeff = viscosityData[subName]
         loc = findlast(x -> x<=Temp, Trange)
-        if loc == length(Trange)
+        if isnothing(loc)
+            printstyled(color=:red,@sprintf("T = %0.3goC out fo range .\n",Temp))
+            return NaN
+        elseif loc == length(Trange)
             return coeff[loc] + (Temp-Trange[loc])*(coeff[loc]-coeff[loc-1])/
                 (Trange[loc]-Trange[loc-1])
         else
