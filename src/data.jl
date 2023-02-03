@@ -72,6 +72,9 @@ gasThermoData = Dict(
 
 " Molar mass of substance, [g/mol]"
 molarMassData = Dict(
+    "CH4" => 16,
+    "CO" =>28,
+    "CO2" =>44,
     "Co" => 58.93,
     "CoO" => 74.93,
     "Co3O4" => 240.80,
@@ -80,7 +83,8 @@ molarMassData = Dict(
     "Fe" => 55.85,
     "FeO" => 71.85,
     "Fe3O4" => 231.56,
-    "Fe2O3" => 159.69,
+    "Fe2O3" => 159.69, 
+    "H2" => 2,
     "MgAl2O4" => 142.27,
     "N2" => 28,
     "Ni" => 58.69,
