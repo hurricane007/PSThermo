@@ -6,6 +6,11 @@ Currently the vailabel gases are ["N2", "CO", "O2", "CH4", "Ar", "H2O", "CO2", "
 
 available solids are ["Co3O4", "Cu", "CuO", "Ni", "Co", "Fe3O4", "FeO", "NiO", "MgAl2O4", "CoO", "Fe2O3", "Fe"]
 
+## usage
+For gases: GasCp/GasEntropy/GasEnthalpy/Viscosity("Name", Temperature [K]) # [kJ/mol* K]/[kJ/mol]/[Pa* s] 
+For solids: SolidsCp/SolidsEntropy/SolidsEnthalpy("Name", Temperature [K]) # [kJ/mol* K]/[kJ/mol]
+PSThermo.Mm("Name")
+
 ## method
 
 Heat capacity, Enthalpy, Entropy are calculated by
