@@ -9,15 +9,15 @@ available solids are ["Co3O4", "Cu", "CuO", "Ni", "Co", "Fe3O4", "FeO", "NiO", "
 ## usage
 For gases: 
 
-    `GasCp/GasEntropy/GasEnthalpy/Viscosity("Name", Temperature [K]) # [kJ/mol* K]/[kJ/mol]/[Pa* s]`
+    GasCp/GasEntropy/GasEnthalpy/Viscosity("Name", Temperature [K]) # [kJ/mol* K]/[kJ/mol]/[Pa* s]
     
 For solids: 
 
-    `SolidsCp/SolidsEntropy/SolidsEnthalpy("Name", Temperature [K]) # [kJ/mol* K]/[kJ/mol]`
+    SolidsCp/SolidsEntropy/SolidsEnthalpy("Name", Temperature [K]) # [kJ/mol* K]/[kJ/mol]
     
 And: 
 
-    `PSThermo.Mm("Name")`
+    PSThermo.Mm("Name")
 
 ## method
 
