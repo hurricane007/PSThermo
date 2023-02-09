@@ -1,6 +1,7 @@
 module PSThermo
     import Printf.@sprintf
     include("data.jl")
+    include("basicFunctions.jl")
     include("SolidsThermo.jl")
     include("GasThermo.jl")
     include("MolarMass.jl")
