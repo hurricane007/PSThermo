@@ -12,7 +12,7 @@ function GasEnthalpy(subName::String, Temp::Real)
         else
             T = Temp*1E-3
             loc = findlast(x -> x<=Temp, Trange)
-            return sum( [T, T^2/2, T^3/3, T^4/4, -1/T, 1, 0, -1] .* coeff[loc,:]) + coeff[loc, end]
+            return EnthalpyNIST(T, coeff) #sum( [T, T^2/2, T^3/3, T^4/4, -1/T, 1, 0, -1] .* coeff[loc,:]) + coeff[loc, end]
         end
     catch
         printstyled(color=:red,@sprintf("%s not found in database.\n",subName))
@@ -22,6 +22,10 @@ end
 
 function GasEnthalpy()
     println("Availabel gases are $(keys(gasThermoData))")
+end
+
+function EnthalpyNIST(T, p)
+    p[1]*T + p[2]*T^2/2+p[3]*T^3/3 + p[4]*T^4/4 -p[5]/T + p[6]
 end
 
 " return the entropy of substance, [kJ/mol*K]"
@@ -36,7 +40,7 @@ function GasEntropy(subName::String, Temp::Real)
         else
             T = Temp*1E-3
             loc = findlast(x -> x<=Temp, Trange)
-            return sum( [log(T), T, T^2/2, T^3/3, -1/(2*T^2), 0, 1, 0] .* coeff[loc,:])*1E-3
+            return EntropyNIST(T, coeff) #sum( [log(T), T, T^2/2, T^3/3, -1/(2*T^2), 0, 1, 0] .* coeff[loc,:])*1E-3
         end
     catch
         printstyled(color=:red,@sprintf("%s not found in database.\n",subName))
@@ -46,6 +50,10 @@ end
 
 function GasEntropy()
     println("Availabel gases are $(keys(gasThermoData))")
+end
+
+function EntropyNIST(T, p)
+    return p[1]*log(T)+p[2]*T+p[3]*t^2/2+p[4]*T^3/3-p[5]/(2*T^2)+p[7]
 end
 
 "return the heat capacity of substance, kJ/mol*K"
@@ -71,4 +79,8 @@ end
 
 function GasCp()
     println("Availabel gases are $(keys(gasThermoData))")
+end
+
+function CpNIST(T, p)
+    return p[1] + p[2]*T+p[3]*T^2+p[4]*T^3+p[5]/T^2
 end
