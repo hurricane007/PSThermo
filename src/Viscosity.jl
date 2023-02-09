@@ -22,3 +22,18 @@ end
 function Viscosity()
     println(keys(viscosityData))
 end
+
+function getViscosityData(subName::String)
+    try
+        Trange = viscosityData["Temp"]
+        viscovisity_array = viscosityData[subName]
+        return Trange, viscovisity_array
+    catch
+        printstyled(color=:red,@sprintf("%s not found in database.\n",subName))
+        return NaN
+    end
+end
+    
+function getViscosityData()
+    println(keys(viscosityData))
+end
